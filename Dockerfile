@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y git
 WORKDIR /app
 
 # Clone your repo
-RUN git clone https://github.com/RaviMargaveni-hub/hiring-app.git .
+RUN git clone https://github.com/teja384/Hiring-app-argocd.git .
 
 # Build the app
 RUN mvn clean package
