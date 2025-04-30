@@ -7,8 +7,12 @@ WORKDIR /app
 # Clone the repository into the working directory
 RUN git clone https://github.com/teja384/Hiring-app-argocd.git .
 
-# Verify the repository and pom.xml file exist
-RUN ls -al /app && cat /app/pom.xml
+# List all files to verify the contents (for debugging)
+RUN ls -al /app
+
+# If pom.xml is in a subdirectory, change into that directory and run Maven
+# Example: If pom.xml is in a subdirectory like /app/subdir, uncomment the line below:
+# RUN cd subdir && mvn clean package
 
 # Build the application with Maven
 RUN mvn clean package
