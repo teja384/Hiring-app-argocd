@@ -5,7 +5,7 @@ FROM maven:3.8.5-openjdk-8 as build
 WORKDIR /app
 
 # Clone the repository into the working directory
-RUN git clone https://github.com/teja384/Hiring-app-argocd.git .
+RUN git clone https://github.com/teja384/hiring-app.git .
 
 # List all files to verify the contents (for debugging)
 RUN ls -al /app
